@@ -98,8 +98,8 @@ header h1 {
 
 .share {
     position: relative;
-    width: 15px;
-    height: 15px;
+    width: 1.2rem;
+    height: 1.2rem;
     align-self: center;
     right: -100px;
     cursor: pointer;
@@ -118,6 +118,8 @@ header h1 {
     bottom: 280px;
     border-radius: 10px;
     cursor: pointer;
+    color: white;
+    font-weight: 500;
 }
 
 .sharecon.show {
@@ -169,5 +171,7 @@ header h1 {
         display: flex;
         position: static;
         background-color: var(--Very-Dark-Grayish-Blue);
+        gap: 2rem;
+        color: white;
     }
 }
