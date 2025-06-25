@@ -1,6 +1,6 @@
-let shares = document.querySelector(".share");
+let share = document.querySelector(".share");
 let sharecon = document.querySelector(".sharecon");
 
-shares.addEventListener("click", function() {
+share.addEventListener("click", function() {
     sharecon.classList.toggle("show");
 });
