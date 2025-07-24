@@ -1,5 +1,5 @@
 * {
-    font-family: 'Manrope';
+    font-family: "Manrope", "Segoe UI", "Roboto", "Open Sans", sans-serif;
     font-size: 13px;
     box-sizing: border-box;
     margin: 0;
@@ -14,84 +14,63 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    display: block;
+    display: grid;
+    place-items: center;
     background-color: var(--Light-Grayish-Blue);
 }
 
 main {
-    width: 50%;
-    height: fit-content;
-    margin: auto;
-    margin-top: 10rem;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0.2px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-height: 20rem;
+    border-radius: 20px;
 }
 
-.drawers {
-    width: 45%;
-    height: auto;
-}
-
-.drawers img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    user-select: none;
+main img {
+    width:25rem;
+    align-self: center;
+    border-radius: 20px 0 0 20px;
 }
 
 header {
+    width:40%;
+    padding: 1rem 2rem;
+    align-self: center;
+    background-color:white;
+    border-radius: 0 20px 20px 0;
     display: flex;
-    width: 55%;
-    height: auto;
-    padding: 1rem;
-    flex-direction: column;
-    gap: 2rem;
-    background-color: white;
-    border-radius: 10px;
+    flex-flow: column;
+    gap: 1.5rem;
 }
 
 header h1 {
     font-size: 1.5rem;
-    word-wrap: break-word;  /* atau */
-    word-break: break-word;
 }
 
-.desc {
-    color: var(--Very-Dark-Grayish-Blue);
-    font-size: 1rem;
+header>p {
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+}
+
+.user img {
+    width: 40px;
+    border-radius: 100%;
 }
 
 .user {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    gap: 1rem;
 }
 
 .usersec {
     display: flex;
     gap: 1rem;
-}
-
-.avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    margin: 0;
-    align-self: center;
-    user-select: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .name {
@@ -99,85 +78,54 @@ header h1 {
 }
 
 .date {
-    color: var(--Desaturated-Dark-Blue);
+    color: var(--Grayish-Blue);
 }
 
-.share {
-    position: relative;
-    width: 1.2rem;
-    height: 1.2rem;
-    align-self: center;
-    right: -100px;
+img.share {
+    width: 25px;
     cursor: pointer;
 }
 
 .sharecon {
-    background-color: var(--Desaturated-Dark-Blue);
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 1rem;
-    position: absolute  ;
-    right: 340px;
-    bottom: 280px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-weight: 500;
-}
-
-.sharecon.show {
     display: flex;
-    animation: showed ease-in-out 0.3s forwards;
+    background-color: var(--Desaturated-Dark-Blue);
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 20px;
+    align-items: center ;
+    position: absolute;
+    top:300px;
+    right: 265px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: ease-in-out 0.2s;
 }
 
-@keyframes showed {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+.show {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
 }
 
+.sharecon p {
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
 
+.tail {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 90px;
+    rotate: 45deg;
+    background-color: var(--Desaturated-Dark-Blue);
+}
 
-@media screen and (max-width:700px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin-top: 2rem;
-    }
-
-    header{
-        width: 100%;
-    }
-
-    .drawers {
-        width: 100%;
-        height: 40%;
-    }
-
-    .drawers img {
-        border-radius: 0;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-
-    .share {
-        display: none;
-    }
-
-    .sharecon {
-        display: flex;
-        position: static;
-        background-color: var(--Very-Dark-Grayish-Blue);
-        gap: 2rem;
-        color: white;
-    }
+.sharecon img {
+    width: 30px;
+    cursor: pointer;
 }
