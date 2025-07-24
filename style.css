@@ -13,6 +13,8 @@
     --Light-Grayish-Blue: hsl(210, 46%, 95%);
 }
 
+img {user-select: none;}
+
 body {
     width: 100%;
     height: 100vh;
@@ -22,12 +24,13 @@ body {
 }
 
 main {
+    width: min-content;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
     max-height: 20rem;
     border-radius: 20px;
+    box-shadow: 0 0 10px 0.1px rgba(0, 0, 0, 0.164);
 }
 
 main img {
@@ -37,7 +40,8 @@ main img {
 }
 
 header {
-    width:40%;
+    width:30rem;
+    height: 100%;
     padding: 1rem 2rem;
     align-self: center;
     background-color:white;
@@ -97,7 +101,7 @@ img.share {
     top:300px;
     right: 265px;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
     pointer-events: none;
     transition: ease-in-out 0.2s;
 }
