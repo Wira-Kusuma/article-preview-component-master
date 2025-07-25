@@ -135,3 +135,51 @@ img.share {
     width: 30px;
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        max-height: none;
+        width: 90vw;
+        min-width: 0;
+        border-radius: 20px;
+    }
+
+    main img {
+        width: 100vw;
+        max-width: 100%;
+        border-radius: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    header {
+        width: 90vw;
+        padding: 1.5rem 1rem;
+        border-radius: 0 0 20px 20px;
+        gap: 1rem;
+    }
+
+    .share {
+        display: none;
+    }
+
+    .sharecon {
+        width: 90%;
+        padding: 1rem 4rem;
+        align-self: center;
+        display: flex;
+        position: unset;
+        top: unset;
+        right: unset;
+        opacity: unset;
+        pointer-events: unset;
+        justify-content: center;
+        justify-content: center;
+        gap: 2rem;
+        background-color: var(--Desaturated-Dark-Blue);
+    }
+
+    .tail {
+        display: none;
+    }
+}
