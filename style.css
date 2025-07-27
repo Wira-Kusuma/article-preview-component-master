@@ -91,9 +91,12 @@ header>p {
     position: relative;
 }
 
-.share img {
+.share img:first-child {
+    box-sizing: content-box;
     width: 25px;
+    height: 25px;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
 .sharecon {
@@ -105,7 +108,7 @@ header>p {
     align-items: center ;
     position: absolute;
     top: -80px;
-    left: -90px;
+    left: -80px;
     opacity: 0;
     transform: translateY(10px);
     pointer-events: none;
@@ -164,23 +167,34 @@ header>p {
     }
 
     .share {
-        display: none;
+        position: relative;
+        align-self: center;
+    }
+
+    .share img {
+        position: relative;
+        right: 30px;
     }
 
     .sharecon {
-        width: 90%;
-        padding: 1rem 4rem;
+        width: 24.5rem;
         align-self: center;
         display: flex;
-        position: unset;
-        top: unset;
-        right: unset;
+        position: absolute;
+        left: -290px;
+        bottom: -230px;
         opacity: unset;
         pointer-events: unset;
         justify-content: center;
-        justify-content: center;
         gap: 2rem;
         background-color: var(--Desaturated-Dark-Blue);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .actived {
+        opacity: 1;
+        pointer-events: all;
     }
 
     .tail {
