@@ -181,12 +181,11 @@ header>p {
         align-self: center;
         display: flex;
         position: absolute;
-        left: -290px;
+        left: -275px;
         bottom: -230px;
         opacity: unset;
         pointer-events: unset;
-        justify-content: center;
-        gap: 2rem;
+        justify-content: space-evenly;
         background-color: var(--Desaturated-Dark-Blue);
         opacity: 0;
         pointer-events: none;
